@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tagengo</title>
+    <link rel="icon" href="src/images/finalogo.png" sizes="64x64" type="image/png">
     <meta name="description" content="Welcome to Tagengo - The ultimate language learning and experiencing app with AR and AI features.">
     <meta name="keywords" content="language learning, AR, AI, Tagengo, app">
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
@@ -19,9 +20,20 @@
 		.hero-title {
 			color: #FF7562; /* Quantum Computing color */
 		}
+		@media (max-width: 768px){
+			.hero-title {
+				margin-top: 2.5rem
+			}
+		}
 		.hero-paragraph {
 			color: #ffffff;
+			font-size: 0.9rem;
 		}
+        @media (max-width: 768px) {
+            .hero-paragraph {
+                text-align: center;
+            }
+        }
 		.button {
 			padding: 15px 20px;
 			border-radius: 5px;
@@ -33,18 +45,59 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		}
 		.button-primary {
-			background-color: #FF7562; /* AI color */
+			background: linear-gradient(90deg, #FF7562, #47A1F9); /* Gradient color */
 			color: white;
 		}
 		.button-primary:hover {
-			background-color: #600B00;
+			background: linear-gradient(90deg, #600B00, #a60101); /* Darker gradient for hover effect */
 		}
+
         .logo {
         position: absolute;
         top: 10px;
         left: -20px;
-        height: 150px; /* Adjust height as needed */
-    }
+        height: 180px; /* Adjust height as needed */
+    	}
+
+		@media (max-width: 768px) {
+			.logo {
+				top: 0px;
+				left: 120px;
+				height:180px;
+			}
+		}
+
+		@media (max-width: 768px) {
+            body {
+                font-family: 'Avenir', sans-serif;
+            }
+        }
+
+		.button-shadow {
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			border-radius: 100px; /* Adjust the value as needed */
+		}
+
+		.button-primary.button-shadow::before {
+			box-shadow: 0 8px 16px rgb(74, 4, 4);
+			mix-blend-mode: normal;
+		}
+
+		.button::before {
+			border-radius: 100px;
+		}
+
+	</style>
+	<style>
+		.hero-title {
+			color: #FF7562; /* Quantum Computing color */
+			font-size: 2.5rem; /* Increase font size */
+			background: linear-gradient(90deg, #FF7562, #47A1F9); /* Gradient color */
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.305); /* Add shadow */
+			font-family: 'Montserrat', serif; /* Custom font */
+		}
 	</style>
 </head>
 <body class="is-boxed has-animations">
@@ -361,49 +414,90 @@
 			
 
 
-            <section class="media section">
-                <div class="container-sm">
-                    <div class="media-inner section-inner">
-                        <div class="media-header text-center">
-                            <h2 class="section-title mt-0">How it Works!</h2>
-                            <p class="section-paragraph mb-0"> Tagengo aims at overlaying translations, pronunciation guides, and cultural context onto real-world objects using AR and AI tecnology , helping learners associate words in their live environment.
+			<section class="media section">
+				<div class="container-sm">
+					<div class="media-inner section-inner">
+						<div class="media-header text-center">
+							<h2 class="section-title mt-0">How it Works!</h2>
+							<p class="section-paragraph mb-0"> Tagengo aims at overlaying translations, pronunciation guides, and cultural context onto real-world objects using AR and AI technology, helping learners associate words in their live environment.
 								 Learners can interact with virtual objects and characters, making the learning process more engaging and memorable.
 							</p>
-                        </div>
+						</div>
 						<div class="media-canvas">
-							<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-							    <defs>
-							        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="media-canvas">
-							            <stop stop-color="#06101F" offset="0%"/>
-							            <stop stop-color="#1D304B" offset="100%"/>
-							        </linearGradient>
-							    </defs>
-							    <rect width="800" height="450" rx="8" fill="url(#media-canvas)" fill-rule="evenodd"/>
-							</svg>
-							<div class="media-control">
-								<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-								    <defs>
-								        <linearGradient x1="87.565%" y1="15.873%" x2="17.086%" y2="80.538%" id="media-control">
-								            <stop stop-color="#FFF" stop-opacity=".64" offset="0%"/>
-								            <stop stop-color="#FFF" offset="100%"/>
-								        </linearGradient>
-										<filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="media-shadow">
-                                            <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"></feOffset>
-                                            <feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"></feGaussianBlur>
-                                            <feColorMatrix values="0 0 0 0 0.024 0 0 0 0 0.064 0 0 0 0 0.12 0 0 0 0.24 0" in="shadowBlurOuter"></feColorMatrix>
-                                        </filter>
-								    </defs>
-								    <g fill="none" fill-rule="evenodd">
-								        <circle fill="#FFF" cx="48" cy="48" r="48" style="mix-blend-mode:multiply;filter:url(#media-shadow)"/>
-										<circle fill="url(#media-control)" cx="48" cy="48" r="48"/>
-								        <path d="M44.6 39.2a1.001 1.001 0 0 0-1.6.8v18a1.001 1.001 0 0 0 1.6.8l12-9a.998.998 0 0 0 0-1.6l-12-9z" fill="#1D304B"/>
-								    </g>
-								</svg>
+							<div class="video-wrapper">
+								<div class="video-thumbnail" onclick="playVideo()">
+									<div class="thumbnail-box">
+										<img src="src/images/finalogo.png" alt="Thumbnail" class="thumbnail-image">
+									</div>
+									<div class="play-button">
+										<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+											<circle fill="#FFF" cx="48" cy="48" r="48" style="mix-blend-mode:multiply;"/>
+											<path d="M44.6 39.2a1.001 1.001 0 0 0-1.6.8v18a1.001 1.001 0 0 0 1.6.8l12-9a.998.998 0 0 0 0-1.6l-12-9z" fill="#1D304B"/>
+										</svg>
+									</div>
+								</div>
+								<iframe id="video-iframe" width="800" height="450" src="https://www.youtube.com/embed/_9prH7NFmLI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: none;"></iframe>
 							</div>
 						</div>
-                    </div>
-                </div>
-            </section>
+					</div>
+				</div>
+			</section>
+			
+			<style>
+				.video-wrapper {
+					position: relative;
+					padding-bottom: 56.25%; /* 16:9 aspect ratio */
+					height: 0;
+					overflow: hidden;
+					max-width: 100%;
+					background: #000;
+					border-radius: 8px; /* Rounded corners */
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a cool effect */
+				}
+				.video-wrapper iframe {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 0;
+					border-radius: 8px; /* Rounded corners */
+				}
+				.video-thumbnail {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					cursor: pointer;
+					border-radius: 8px; /* Rounded corners */
+				}
+				.thumbnail-box {
+					background: #000; /* Black box */
+					padding: 20px;
+					border-radius: 8px; /* Rounded corners */
+				}
+				.thumbnail-image {
+					width: 500px; /* Adjust size as needed */
+					height: auto;
+				}
+				.play-button {
+					position: absolute;
+					width: 96px;
+					height: 96px;
+				}
+			</style>
+			
+			<script>
+				function playVideo() {
+					document.querySelector('.video-thumbnail').style.display = 'none';
+					document.getElementById('video-iframe').style.display = 'block';
+					document.getElementById('video-iframe').src += "&autoplay=1";
+				}
+			</script>
 
 			<section class="newsletter section">
                 <div class="container-sm">
